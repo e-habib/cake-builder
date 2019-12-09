@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cake</title>
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Raleway" rel="stylesheet">
+	
+<style>
+	h1 {
+	font-family: 'Raleway', sans-serif;
+	color: #626363;
+	letter-spacing: 5px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	
+	p {
+		font-family: 'Raleway', sans-serif;
+		color: #626363;
+	}
+	
+	
+	.cake {
+		background-image: url(sheetcake.png);
+		background-color: #F2E4D6;
+		background-size:cover;
+		width: 100%;
+		height: 600px;
+		text-align: center;
+	}
+	
+	.cakeimg {
+	width: 200px;
+	height: auto;
+	border: 2px solid #646464;
+		cursor: pointer;
+	}
+	
+	.customize {
+		background-color: azure;
+	}
+	#color {
+	width: 100px;
+	height: 100px;
+	border: 5px solid #646464;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+		float: left;
+	}
+	
+	.colors {
+		width: 100%;
+		height: 150px;
+	}
+	
+	#flavor {
+		
+	width: 100px;
+	height: 100px;
+	border: 5px solid #646464;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	float: left;
+	font-family: 'Raleway', sans-serif;
+	color: #626363;
+	
+	}
+	
+	.messageimg {
+	margin-top: 200px;
+	}
+	</style>
+</head>
+
+<body>
+	
+<section class="cake">
+	<img class="messageimg" src="happybirthday.png" width="500" height="174" alt=""/> </section>
+	
+<div class="customize">
+<h1>Customize Your Cake</h1>
+  <div class="message">
+	<p>Message</p>
+	<img class="cakeimg" src="happybirthday.png" alt=""/>
+	<img class="cakeimg" src="happybirthday2.png" alt=""/>
+	<img class="cakeimg" src="sorry.png" alt=""/>
+	<img class="cakeimg" src="love.png" alt=""/>
+	<img class="cakeimg" src="congrats.png" alt=""/>
+	<img class="cakeimg" src="babyboy.png" alt=""/>
+	<img class="cakeimg" src="babygirl.png" alt=""/>
+	  
+	  </div>
+	<p>Position:</p>
+  <input type="range" min="1" max="100" value="50" class="position">
+	<hr>
+	
+<form>
+	  <p>Name:</p>
+		<input type="text">
+	
+  </form>
+	<p>Text size:</p>
+  <input type="range" min="1" max="100" value="50" class="size"><br>
+	
+	<p>Font:</p>
+	<select name="font">
+	<option value="raleway">Raleway</option>
+	<option value="indie">Indie Flower</option>
+	<option value="pacifico">Pacifico</option>
+
+	</select>
+	
+<div class="colors">
+	<p>Color:</p>
+	<div id="color" style="background-color: #CB216A"></div>
+	<div id="color" style="background-color: #3DB8FF"></div>
+	<div id="color" style="background-color: #9BCE50"></div>
+	
+	</div>
+	<hr>
+	
+<div class="flavors">
+	<p>Frosting:</p>
+	<div id="flavor" style="background-color: #422E1B">Chocolate</div>
+	<div id="flavor" style="background-color:  #F2E4D6">Vanilla</div>
+	<div id="flavor" style="background-color: #F86769">Strawberry</div>
+	</div>
+	
+	
+</div>
+</body>
+</html>

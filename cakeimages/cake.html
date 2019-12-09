@@ -1,0 +1,535 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>cake</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Raleway" rel="stylesheet">
+
+    <style>
+        h1 {
+	font-family: 'Raleway', sans-serif;
+	color: #626363;
+	letter-spacing: 5px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	
+	p {
+		font-family: 'Raleway', sans-serif;
+		color: #626363;
+	}
+	
+	
+	.cake {
+		background-image: url(sheetcake.png);
+		background-color: #F2E4D6;
+		background-size:cover;
+		background-position: top;
+		width: 50%;
+		height: 657px;
+		text-align: center;
+		float: right;
+	}
+	
+	.cakeimg {
+	width: 200px;
+	height: auto;
+		cursor: pointer;
+	}
+	
+	.customize {
+		background-color: azure;
+		width: 50%;
+		float: left; 
+	}
+	
+	#pink {
+	width: 100px;
+	height: 100px;
+	border: 5px solid #646464;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+		float: left;
+		background-color: #CB216A;
+	}
+	
+	#blue {
+	width: 100px;
+	height: 100px;
+	border: 5px solid #646464;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+		float: left;
+	background-color: #3DB8FF;
+	}
+	
+	#green {
+	width: 100px;
+	height: 100px;
+	border: 5px solid #646464;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+		float: left;
+	background-color: #9BCE50;
+	}
+	
+	.colors {
+		float: left;
+		margin-left: 30px;
+	}
+	
+	
+	#chocolate {
+		
+	width: 100px;
+	height: 100px;
+	border: 5px solid #646464;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	float: left;
+	font-family: 'Raleway', sans-serif;
+	color: #626363;
+	background-color: #422E1B;
+	
+	}
+	
+		#vanilla {
+		
+	width: 100px;
+	height: 100px;
+	border: 5px solid #646464;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	float: left;
+	font-family: 'Raleway', sans-serif;
+	color: #626363;
+	background-color: #F2E4D6;
+	
+	}
+	
+	#strawberry {
+		
+	width: 100px;
+	height: 100px;
+	border: 5px solid #646464;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	float: left;
+	font-family: 'Raleway', sans-serif;
+	color: #626363;
+	background-color: #F86769;
+	
+	}
+	
+	.messageimg {
+	margin-top: 150px;
+	}
+	
+	#name {
+	font-family: 'Pacifico', cursive;
+	font-size: 50px;
+		color: #CB216A;
+	}
+	
+	.type {
+		float: left;
+		margin-left: 30px;
+	}
+        
+     #open {
+            background-color: orange;
+            color: white;
+            padding: 9px 7px;
+            transition: 1s;
+            cursor: pointer;
+
+        }
+
+        #open:hover {
+            background-color: brown;
+        }
+
+
+
+        #information,
+        #thankyou {
+            padding: 20px;
+        }
+
+        #thankyou {
+            display: none;
+        }
+
+        #information img,
+        #thankyou img {
+            width: 190px;
+            height: auto;
+        }
+        
+            #holdImage {
+            width: 200px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #holdImage img {
+            width: 100%;
+            height: auto;
+
+        }
+
+        #modal {
+            
+            font-family: 'Raleway', sans-serif;
+            position: fixed;
+
+            top: 0px;
+
+            left: 0px;
+
+            height: 100%;
+
+            width: 100%;
+
+            background-Color: rgba(153, 153, 153, 0.6);
+
+            z-index: 1;
+
+           display: none;
+            
+            animation-name: modalopen;
+
+            animation-duration: 1s;
+        }
+        
+        @keyframes modalopen {   
+
+from {        opacity: 0   
+
+}
+    to {        opacity: 1   
+
+}
+
+}
+
+        
+         #modalContent {
+            width: 70%;
+            background-color: white;
+
+            margin: 40px auto;
+        }
+        
+        
+        #closeMe {
+            cursor: pointer;
+            float: right;
+            transition: all 1s;
+        }
+
+        #closeMe:hover {
+            transform: rotate(90deg);
+        }
+
+        #innerModal {
+            padding: 30px;
+        }
+        
+        header {
+            background-color: cornflowerblue;
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+        }
+	
+
+	</style>
+</head>
+
+<body>
+    <button id="open" onclick="openModal()">ADD TO CART</button>
+
+    <section class="cake">
+        <div class="messageimg">
+            <img id="mymessage" src="happybirthday.png" width="500" height=auto alt="" />
+        </div>
+        <div id="name">Name</div>
+
+
+    </section>
+
+    <div class="customize">
+        <h1>Customize Your Cake</h1>
+        <div class="message">
+            <p>Message:</p>
+            <img class="cakeimg" src="happybirthday.png" alt=""/ onclick="chooseImage()">
+            <img class="cakeimg" src="happybirthday2.png" alt=""/ onclick="happybirthday2()">
+            <img class="cakeimg" src="sorry.png" alt=""/ onclick="sorry()">
+            <img class="cakeimg" src="love.png" alt=""/ onclick="love()">
+            <img class="cakeimg" src="congrats.png" alt=""/ onclick="congrats()">
+            <img class="cakeimg" src="babyboy.png" alt=""/ onclick="babyBoy()">
+            <img class="cakeimg" src="babygirl.png" alt=""/ onclick="babyGirl()">
+
+
+            <p>Position:</p>
+            <input type="range" min="50" max="200" value="100" id="shifter" onchange="shiftAround()">
+        </div>
+        <hr>
+        <div class="type">
+
+            <p>Name:</p>
+            <input type="text" id="nameChange" onkeyup="textChange()">
+
+
+            <p>Text size:</p>
+            <input type="range" min="10" max="175" value="70" id='sizer' onchange="fontSize()"><br>
+
+            <form action="">
+                <p>Font:</p>
+                <select id="fontSelect" onchange="fontFamily(this)">
+                    <option value="helvetica">helvetica</option>
+                    <option value="Raleway">Raleway</option>
+                    <option value="Indie Flower">Indie Flower</option>
+                    <option value="Pacifico">Pacifico</option>
+
+                </select>
+            </form>
+
+
+        </div>
+
+        <div class="colors">
+            <p>Pick any color:</p>
+            <input type="color" value="#CB216A" id="colorText" onchange="textColor()">
+            <!--
+            <div id="pink"></div>
+            <div id="blue"></div>
+            <div id="green"></div>
+            <hr>
+-->
+
+
+            <p>Frosting:</p>
+            <div id="chocolate" onclick="chooseChocolate()">Chocolate</div>
+            <div id="vanilla" onclick="chooseVanilla()">Vanilla</div>
+            <div id="strawberry" onclick="chooseStrawberry()">Strawberry</div>
+        </div>
+
+    </div>
+
+
+    <div id="modal">
+
+        <div id="modalContent">
+
+            <header>Your Order<span id="closeMe" onclick="closeModal()">X</span></header>
+
+            <div id="innerModal">
+                <div id="information">
+
+                    <!--   this is a placeholder div that we will use later-->
+                    <div id="holdImage"></div>
+
+                    <div class="form">
+
+                        First name: <input type="text" name="firstname" id="firstName" size="50">
+                        <br><br>
+                        Last name:<input type="text" name="lastname" id="lastName" size="50">
+                        <br><br>
+                        email: <input type="email" name="email" id="email" size="50">
+                        <br><br>
+                        QTY: <input type="number" min="1" max="100" id="cakeQty">
+                        <br><br>
+                        SIZE: <form>
+                            <select id="cakeSize">
+                                <option value="Quarter Sheet">Quarter Sheet</option>
+                                <option value="Half Sheet">Half Sheet</option>
+                                <option value="Full Sheet">Full Sheet</option>
+
+                            </select>
+                        </form>
+                    </div>
+                    <br><br>
+
+                    <button id="open" onclick="submitOrder()">SUBMIT ORDER</button>
+                </div>
+                <div id="thankyou">Thank you for your order</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let modal = document.getElementById('modal');
+
+        let openButton = document.getElementById('open');
+
+        let closeButton = document.getElementById('closeMe');
+        let information = document.getElementById('information');
+
+        let thanks = document.getElementById('thankyou');
+
+        function openModal() {
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+ window.addEventListener('click', outsideClick);
+        
+           function outsideClick(event) {
+
+                if (event.target == modal) {
+
+                    modal.style.display = 'none';
+
+                }
+
+            }
+        
+           document.onkeydown = function(evt) {
+
+                evt = evt || window.event;
+
+                if (evt.keyCode == 27) {
+
+                    modal.style.display = "none";
+
+                }
+
+            };
+        
+
+        
+        function chooseImage() {
+            document.getElementById('mymessage').src = "happybirthday.png"
+        }
+
+        function happybirthday2() {
+            document.getElementById('mymessage').src = "happybirthday2.png"
+        }
+
+        function sorry() {
+            document.getElementById('mymessage').src = "sorry.png"
+        }
+
+        function love() {
+            document.getElementById('mymessage').src = "love.png"
+        }
+
+        function congrats() {
+            document.getElementById('mymessage').src = "congrats.png"
+        }
+
+        function babyBoy() {
+            document.getElementById('mymessage').src = "babyboy.png"
+        }
+
+        function babyGirl() {
+            document.getElementById('mymessage').src = "babygirl.png"
+        }
+
+        function chooseChocolate() {
+            document.querySelector('.cake').style.backgroundColor = "#422E1B"
+
+        }
+
+        function chooseVanilla() {
+            document.querySelector('.cake').style.backgroundColor = "#F2E4D6"
+
+        }
+
+        function chooseStrawberry() {
+            document.querySelector('.cake').style.backgroundColor = "#F86769"
+
+        }
+
+        function textChange() {
+
+            let typing = document.getElementById('nameChange').value;
+            document.getElementById('name').innerHTML = typing;
+        }
+
+        function fontSize() {
+
+            let size = document.getElementById('sizer').value;
+            document.getElementById('name').style.fontSize = size + "px";
+        }
+
+
+        function messageSize() {
+
+            let size = document.getElementById('imgSize').value;
+            document.getElementById('name').style.fontSize = size + "px";
+        }
+
+        function fontFamily() {
+            var yourFont = document.forms[0].fontSelect.value;
+            document.getElementById('name').style.fontFamily = yourFont;
+        }
+
+        function shiftAround() {
+            let shift = document.getElementById('shifter').value;
+            document.querySelector('.messageimg').style.marginTop = shift + "px";
+        }
+
+        function textColor() {
+
+            let colorT = document.getElementById('colorText').value;
+            document.getElementById('name').style.color = colorT;
+        }
+        
+        function submitOrder() {
+            
+            let firstName = "";
+                let yourSize = "";
+                let cakeQty = 0;
+
+                let price = 0;
+                let total = 0;
+                let tax = 0;
+                let grandTotal = 0;
+            
+             information.style.display = "none";
+                thanks.style.display = "block";
+
+                firstName = document.getElementById('firstName').value;
+
+                yourSize = document.forms[1].cakeSize.value;
+
+                cakeQty = document.getElementById('cakeQty').value;
+             price = 20;
+
+                total = cakeQty * price;
+
+
+                grandTotal = total * 1.055;
+
+                tax = grandTotal - total;
+            
+             document.getElementById('thankyou').innerHTML = "<h1>Thank you, " + firstName + "!</h1><br><br><br>";    
+            document.getElementById('thankyou').innerHTML += "ORDER: " + cakeQty + " " + yourSize + " custom cakes / $" + price + " each.<hr><br>";
+            document.getElementById('thankyou').innerHTML += "<h3>TOTAL: $" + total + "</h3><br>";
+            document.getElementById('thankyou').innerHTML += "<h3>Sales Tax: $" + tax.toFixed(2) + "</h3>";
+            document.getElementById('thankyou').innerHTML += "<h2>GRAND TOTAL: $" + grandTotal.toFixed(2) + "</h2>";
+//            document.querySelector('.headerText').innerHTML = "Thank you for your order!";
+        }
+    </script>
+</body>
+
+</html>
